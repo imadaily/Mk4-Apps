@@ -15,14 +15,15 @@ import time
 
 # Padding for name
 intro_height = 30
-intro_text = "Hi! I'm"
+intro_text = "Alex"
 name_height = 60
 status_height = 20
 info_height = 30
 logo_path = "emfcampqueer_home/pridelogo.png"
 logo_height = 150
 logo_width = 56
-
+value_wifi_strength = "No WiFi"
+value_battery = "No Battery"
 # Maximum length of name before downscaling
 max_name = 8
 
@@ -77,9 +78,7 @@ while True:
     text = "";
     value_wifi_strength = wifi_strength()
     value_battery = battery()
-    if value_wifi_strength:
-        text += "Wi-Fi: %s%%, " % int(value_wifi_strength)
-    if value_battery:
-        text += "Battery: %s%%" % int(value_battery)
+    text += "Wi-Fi: %s%%, " % int(value_wifi_strength)
+    text += "Battery: %s%%" % int(value_battery)
     status.text(text)
-    sleep_or_exit(0.5)
+    sleep_or_exit(1)

@@ -28,7 +28,7 @@ max_name = 8
 
 # Background stuff
 init()
-ugfx.clear(ugfx.html_color(0x800080))
+ugfx.clear(ugfx.html_color(0x000000))
 
 # Colour stuff
 style = ugfx.Style()
